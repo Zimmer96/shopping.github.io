@@ -24,26 +24,39 @@ checkoutBtn.addEventListener("click", function () {
 
     thankyouArea.style.display = 'block';
 })
+
+// First add button
  addBtn.addEventListener('click',function () {
    
     shopQuantity.value = parseFloat(shopQuantity.value) + 1;
            let totalAmount =  1219 * parseFloat(shopQuantity.value);
            document.getElementById("mobilePrice").innerText = totalAmount; 
            subTotalPrice.innerText = parseFloat(subTotalPrice.innerText) + 1219;
-           
-           taxPrice.innerText = subTotalPrice.innerText*.15;
+           let subTotal = document.getElementById("subTotalPrice").innerText;
+           let subTotalPrice1 = parseInt(subTotal )
+           document.getElementById("totalPrice").innerText = subTotalPrice1;
+           taxPrice.innerText = parseInt(subTotalPrice.innerText*.15);
+           let subTotalTax = document.getElementById("taxPrice").innerText;
+           let subTotalTaxPrice= parseInt(subTotalTax)
+           document.getElementById("totalPrice").innerText = subTotalTaxPrice;
           
-           document.getElementById("totalPrice").innerText = subTotalPrice.innerText ;
+           document.getElementById("totalPrice").innerText = subTotalPrice1  + subTotalTaxPrice ;
     })
   
+    // First substract button
 subtractBtn.addEventListener('click',function () {
     shopQuantity.value = parseFloat(shopQuantity.value) - 1;
     let totalAmount =  1219 * parseFloat(shopQuantity.value);
     document.getElementById("mobilePrice").innerText = totalAmount;
     subTotalPrice.innerText = parseFloat(subTotalPrice.innerText) - 1219;
-    taxPrice.innerText = subTotalPrice.innerText*.15;
-    document.getElementById("taxPrice").innerText = taxPrice.innerText;
-    document.getElementById("totalPrice").innerText = subTotalPrice.innerText;
+    let subTotal = document.getElementById("subTotalPrice").innerText;
+           let subTotalPrice1 = parseInt(subTotal )
+           document.getElementById("totalPrice").innerText = subTotalPrice1;
+    taxPrice.innerText = parseInt(subTotalPrice.innerText*.15);
+    let subTotalTax = document.getElementById("taxPrice").innerText;
+    let subTotalTaxPrice= parseInt(subTotalTax)
+    document.getElementById("totalPrice").innerText = subTotalTaxPrice;
+    document.getElementById("totalPrice").innerText = subTotalPrice1  + subTotalTaxPrice ;
 })
 
 
@@ -52,40 +65,40 @@ let subtractBtn2 = document.getElementById("substractButton2");
  let shopQuantity2 = document.getElementById("shopQuantity2");
 
   
-
+// second add button
  addBtn2.addEventListener('click',function () {
-   
     shopQuantity2.value = parseFloat(shopQuantity2.value) + 1;
-           let totalAmount2 =  59 * parseFloat(shopQuantity2.value);
-           document.getElementById("mobilePrice2").innerText = totalAmount2; 
-           subTotalPrice.innerText = parseFloat(subTotalPrice.innerText) + 59;
-           document.getElementById("totalPrice").innerText = subTotalPrice.innerText;
-           taxPrice.innerText = subTotalPrice.innerText*.15;
-           document.getElementById("taxPrice").innerText = taxPrice.innerText;
-    })
+    let totalAmount2 =  59 * parseFloat(shopQuantity2.value);
+    document.getElementById("mobilePrice2").innerText = totalAmount2; 
+    subTotalPrice.innerText = parseFloat(subTotalPrice.innerText) + 59;
+    let subTotal2 = document.getElementById("subTotalPrice").innerText;
+    let subTotalPrice2 = parseInt(subTotal2 )
+    document.getElementById("totalPrice").innerText = subTotalPrice2;
+    taxPrice.innerText = parseInt(subTotalPrice.innerText*.15);
+    let subTotalTax2 = document.getElementById("taxPrice").innerText;
+    let subTotalTaxPrice2= parseInt(subTotalTax2)
+    document.getElementById("totalPrice").innerText = subTotalTaxPrice2;
    
+    document.getElementById("totalPrice").innerText = subTotalPrice2  + subTotalTaxPrice2 ;
+
+          
+           
+    })
+ // second substract button  
 subtractBtn2.addEventListener('click',function () {
     shopQuantity2.value = parseFloat(shopQuantity2.value) - 1;
     let totalAmount2 =  59 * parseFloat(shopQuantity2.value);
     document.getElementById("mobilePrice2").innerText = totalAmount2;
     subTotalPrice.innerText = parseFloat(subTotalPrice.innerText) - 59;
-    document.getElementById("totalPrice").innerText = subTotalPrice.innerText;
-    taxPrice.innerText = subTotalPrice.innerText*.15;
-    document.getElementById("taxPrice").innerText = taxPrice.innerText;
+    let subTotal2 = document.getElementById("subTotalPrice").innerText;
+           let subTotalPrice2 = parseInt(subTotal2 )
+           document.getElementById("totalPrice").innerText = subTotalPrice2;
+    taxPrice.innerText = parseInt(subTotalPrice.innerText*.15);
+    let subTotalTax2 = document.getElementById("taxPrice").innerText;
+    let subTotalTaxPrice2= parseInt(subTotalTax2)
+    document.getElementById("totalPrice").innerText = subTotalTaxPrice2;
+    document.getElementById("totalPrice").innerText = subTotalPrice2  + subTotalTaxPrice2 ;
+    
 })
 
-function updateSubTotal(id,num1) {
-    
-    // const current = document.getElementById(id).innerText;
-    // const currentNumber = parseFloat(current);
-    const totalAmount = 1278 + num1;
-    document.getElementById(id).innerText = totalAmount; 
-}
-function getTotalPrice(id) {
-    const current1 = document.getElementById(id).innerText;
-    const num4 = parseFloat(current1);
-    const current2 = document.getElementById(id).innerText;
-    const num5 = parseFloat(current2);
-    let total = num4 + num5;
-    document.getElementById(id).innerText = total;
-}
+
