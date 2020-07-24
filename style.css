@@ -90,13 +90,13 @@ body{
 }
 }
 @media only screen and (min-width: 600px){
-    .body{
+    #login-area{
         padding: 30px;
     }
 }
 @media only screen and (min-width: 768px){
-    body{
-        padding: 100px;
-    }
+   #login-area{
+	   padding: 100px;
+   }
 
 }
