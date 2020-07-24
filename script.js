@@ -9,21 +9,43 @@ let totalPrice = document.getElementById("totalPrice");
 const thankyouArea = document.getElementById('thankYou');
 const backBtn = document.getElementById("backButtons");
 const shoppingArea = document.getElementById('shoppingArea');
+const removeItem1 = document.getElementById('removeItem1');
+const removeItem2 = document.getElementById('removeItem2');
 
-backBtn.addEventListener("click", function () {
-    
-    thankyouArea.style.display = 'none';
-   
+// checkout buttons
+const checkOutBtn = document.getElementById('checkOutButton');
+checkOutBtn.addEventListener("click", function () {
+    const shoppingArea = document.getElementById('shoppingArea');
+    shoppingArea.style.display = 'none';
+    const submitArea = document.getElementById('login-area');
+    submitArea.style.display = 'block';
+})
+
+// enter buttons
+const enterBtn = document.getElementById('enterButton');
+enterBtn.addEventListener("click", function () {
+    const submitArea = document.getElementById('login-area');
+    submitArea.style.display = 'none';
+    const thankYou = document.getElementById('thankYou');
+    thankYou.style.display = 'block';
+})
+// back2 button
+const back2Btn = document.getElementById('backButtons2');
+back2Btn.addEventListener("click", function () {
+    const thankYou= document.getElementById('thankYou');
+    thankYou.style.display = 'none';
+    const submitArea = document.getElementById('login-area');
+    submitArea.style.display = 'block';
+})
+// back1 button
+const back1Btn = document.getElementById('backButtons1');
+back1Btn.addEventListener("click", function () {
+    const submitArea= document.getElementById('login-area');
+    submitArea.style.display = 'none';
+    const shoppingArea = document.getElementById('shoppingArea');
     shoppingArea.style.display = 'block';
 })
 
-const checkoutBtn = document.getElementById("checkOutButtons");
-checkoutBtn.addEventListener("click", function () {
-  
-    shoppingArea.style.display = 'none';
-
-    thankyouArea.style.display = 'block';
-})
 
 // First add button
  addBtn.addEventListener('click',function () {
@@ -39,8 +61,8 @@ checkoutBtn.addEventListener("click", function () {
            let subTotalTax = document.getElementById("taxPrice").innerText;
            let subTotalTaxPrice= parseInt(subTotalTax)
            document.getElementById("totalPrice").innerText = subTotalTaxPrice;
-          
-           document.getElementById("totalPrice").innerText = subTotalPrice1  + subTotalTaxPrice ;
+          let total1 = subTotalPrice1  + subTotalTaxPrice;
+           document.getElementById("totalPrice").innerText = total1;
     })
   
     // First substract button
@@ -56,10 +78,28 @@ subtractBtn.addEventListener('click',function () {
     let subTotalTax = document.getElementById("taxPrice").innerText;
     let subTotalTaxPrice= parseInt(subTotalTax)
     document.getElementById("totalPrice").innerText = subTotalTaxPrice;
-    document.getElementById("totalPrice").innerText = subTotalPrice1  + subTotalTaxPrice ;
+    let total1 = subTotalPrice1  + subTotalTaxPrice
+    document.getElementById("totalPrice").innerText = total1 ;
 })
-
-
+// remove button1
+removeItem1.addEventListener("click",function () {
+    
+    document.getElementById("mobilePrice").innerText = 1219;
+    shopQuantity.value = 1;
+    document.getElementById("subTotalPrice").innerText = 1219 ; 
+    document.getElementById("taxPrice").innerText = 191;
+    document.getElementById("totalPrice").innerText = 1469;
+    
+})
+// remove button2
+removeItem2.addEventListener("click",function () {
+    document.getElementById("mobilePrice2").innerText = 59;
+    shopQuantity2.value = 1;
+    document.getElementById("subTotalPrice").innerText = 1219 ; 
+    document.getElementById("taxPrice").innerText = 191;
+    document.getElementById("totalPrice").innerText = 1469;
+})
+// add2 and sub2
 let addBtn2 = document.getElementById("addButton2");
 let subtractBtn2 = document.getElementById("substractButton2");
  let shopQuantity2 = document.getElementById("shopQuantity2");

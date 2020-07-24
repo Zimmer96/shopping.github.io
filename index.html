@@ -11,8 +11,10 @@
 </head>
 
 <body>
+   
 
    <section id="shoppingArea">
+      <h1 style="text-align: center;">Welcome to the biggest mobile bazaar</h1>
       <div class="container">
          <div class="cart">
             <div class="col-md-12 col-lg-10 mx-auto">
@@ -32,7 +34,7 @@
                         <h5>$<span id="mobilePrice">
                            1219
                         </span></h5>
-                        <img src="images/remove.png" alt="" class="remove-item">
+                        <img src="images/remove.png" alt="" class="remove-item" id="removeItem1">
                      </div>
                   </div>
                </div>
@@ -51,7 +53,7 @@
 
                         </div>
                         <h5>$ <span id="mobilePrice2">59</span></h5>
-                        <img src="images/remove.png" alt="" class="remove-item">
+                        <img src="images/remove.png" alt="" class="remove-item" id="removeItem2">
                      </div>
                   </div>
                </div>
@@ -74,20 +76,59 @@
                   </div>
                </div>
                <div class="col-md-12 pt-4 pb-4">
-                  <button id="checkOutButtons" type="button" class="btn btn-success check-out">Check Out</button>
+                  <button id="checkOutButton" type="button" class="btn btn-success check-out">Check Out</button>
                </div>
             </div>
          </div>
       </div>
    </section>
+   <div id="login-area">
+      <h1 class="text-center">Your trust is our robust</h1>
+      <div class="submit-area">
+          
+         
+          <form>
+            <h4 >Enter your details</h4>
+              <div class="form-group">
+                  
+                  <br>
+              
+                <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Enter your name">
+                
+              </div>
+              <div class="form-group">
+                <!-- <label for="exampleInputPassword1">Password</label> -->
+                <input type="number" class="form-control"  placeholder="Enter your mobile number">
+              </div>
+              <div class="form-group">
+               <!-- <label for="exampleInputPassword1">Password</label> -->
+               <input type="text" class="form-control"  placeholder="Enter your address">
+             </div>
+             <div class="form-group">
+               <!-- <label for="exampleInputPassword1">Password</label> -->
+               <input type="number" class="form-control"  placeholder="Enter your mobile number">
+               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+             </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" >
+                <label class="form-check-label" for="exampleCheck1">Confirm before checking</label>
+              </div>
+              
+            </form>
+            <button id="enterButton" type="submit" class="btn btn-primary login-field">Enter</button>
+      </div>
+      <div class="backButtons">
+         <button id="backButtons1" type="button" class="btn btn-success check-out">Back</button>
+        </div>
+  </div>
    <div id="thankYou">
      <div id="thankYou2">
       <h1>Thank you for shopping with us</h1><br>
       <h4>If you want to know more about us,subscribe to our channel.</h4><br>
       
      </div>
-     <div>
-      <button id="backButtons" type="button" class="btn btn-success check-out">Back</button>
+     <div class="backButtons">
+      <button id="backButtons2" type="button" class="btn btn-success check-out">Back</button>
      </div>
    </div>
 <script src="script.js"></script>

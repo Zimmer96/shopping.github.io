@@ -1,6 +1,22 @@
 body{
 	background: #fff;
 }
+/* body{
+    padding: 100px;
+} */
+#login-area{
+	display: none;
+}
+.login-field{
+    margin-top: 50px;
+}
+.submit-area{
+    margin-top: 50px;
+    padding: 50px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px gray;
+}
 .cart{
 	margin: 100px 0;
 	background-color: #F6F5FA;;
@@ -67,7 +83,20 @@ body{
 	margin: 50px;
 	text-align: center;
 }
-#backButtons{
+.backButtons{
 	float: left;
 	margin-left: 50px;
+	margin-top: 50px;
+}
+}
+@media only screen and (min-width: 600px){
+    .body{
+        padding: 30px;
+    }
+}
+@media only screen and (min-width: 768px){
+    body{
+        padding: 100px;
+    }
+
 }
