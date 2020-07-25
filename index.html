@@ -51,72 +51,73 @@
           </nav>
       </div>
       <h1 style="text-align: center; margin-top: 60px;">Welcome to the biggest mobile bazaar</h1>
-      <div class="container">
-         <div class="cart">
-            <div class="col-md-12 col-lg-10 mx-auto">
-               <div class="cart-item">
-                  <div class="row">
-                     <div class="col-md-7 center-item">
-                        <img src="images/phone-1.png" alt="">
-                        <h5>iPhone 11 128GB Black</h5>
-                     </div>
-
-                     <div class="col-md-5 center-item">
-                        <div class="input-group number-spinner">
-                           <button class="btn btn-default" id="substractButton"><i class="fas fa-minus"></i></button>
-                           <input id="shopQuantity" type="number"class="form-control text-center" value="1">
-                           <button class="btn btn-default" id="addButton"><i class="fas fa-plus"></i></button>
+   
+         <div class="container">
+            <div class="cart">
+               <div class="col-md-12 col-lg-10 mx-auto">
+                  <div class="cart-item">
+                     <div class="row">
+                        <div class="col-md-7 center-item">
+                           <img src="images/phone-1.png" alt="">
+                           <h5>iPhone 11 128GB Black</h5>
                         </div>
-                        <h5>$<span id="mobilePrice">
-                           1219
-                        </span></h5>
-                        <img src="images/remove.png" alt="" class="remove-item" id="removeItem1">
-                     </div>
-                  </div>
-               </div>
-
-               <div class="cart-item">
-                  <div class="row">
-                     <div class="col-md-7 center-item mx-auto">
-                        <img src="images/phone-2.png" alt="">
-                        <h5>iPhone 11 Silicone Case - Black</h5>
-                     </div>
-                     <div class="col-md-5 center-item">
-                        <div class="input-group number-spinner">
-                           <button class="btn btn-default" id="substractButton2"><i class="fas fa-minus"></i></button>
-                           <input id="shopQuantity2" type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default" id="addButton2"><i class="fas fa-plus"></i></button>
-
+   
+                        <div class="col-md-5 center-item">
+                           <div class="input-group number-spinner">
+                              <button id="phone-decrease" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                              <input id="phone-count" type="text" class="form-control text-center" value="1">
+                              <button id="phone-increase" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           </div>
+                           <h5>$ <span id="phone-total">1219</span>
+                           </h5>
+                           <img id="removeItem1" src="images/remove.png" alt="" class="remove-item">
                         </div>
-                        <h5>$ <span id="mobilePrice2">59</span></h5>
-                        <img src="images/remove.png" alt="" class="remove-item" id="removeItem2">
                      </div>
                   </div>
-               </div>
-
-               <div class="cart-item">
-                  <div class="row">
-
-                     <div class="col-md-8">
-                        <h5>Subtotal: </h5>
-                        <h5>Tax:</h5>
-                        <h5>Total:</h5>
-                     </div>
-
-                     <div class="col-md-4 status">
-                        <h5>$ <span id="subTotalPrice">1278</span>
-                        </h5>
-                        <h5>$ <span id="taxPrice">191</span></h5>
-                        <h5>$ <span id="totalPrice">1469</span></h5>
+   
+                  <div class="cart-item">
+                     <div class="row">
+                        <div class="col-md-7 center-item mx-auto">
+                           <img src="images/phone-2.png" alt="">
+                           <h5>iPhone 11 Silicone Case - Black</h5>
+                        </div>
+                        <div class="col-md-5 center-item">
+                           <div class="input-group number-spinner">
+                              <button class="btn btn-default" id="case-decrease"><i class="fas fa-minus"></i></button>
+                              <input id="case-count" type="text" class="form-control text-center" value="1">
+                              <button class="btn btn-default" id="case-increase"><i class="fas fa-plus"></i></button>
+   
+                           </div>
+                           <h5>$ <span id="case-total">
+                              59
+                           </span></h5>
+                           <img id="removeItem2" src="images/remove.png" alt="" class="remove-item">
+                        </div>
                      </div>
                   </div>
-               </div>
-               <div class="col-md-12 pt-4 pb-4">
-                  <button id="checkOutButton" type="button" class="btn btn-success check-out">Check Out</button>
+   
+                  <div class="cart-item">
+                     <div class="row">
+   
+                        <div class="col-md-8">
+                           <h5>Subtotal: </h5>
+                           <h5>Tax:</h5>
+                           <h5>Total:</h5>
+                        </div>
+   
+                        <div class="col-md-4 status">
+                           <h5>$ <span id="subTotalPrice">1,278</span> </h5>
+                           <h5>$ <span id="tax-amount">0</span> </h5>
+                           <h5>$ <span id="grand-total">1278</span></h5>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-12 pt-4 pb-4">
+                     <button id="checkOutButton" type="button" class="btn btn-success check-out">Check Out</button>
+                  </div>
                </div>
             </div>
          </div>
-      </div>
    </section>
    <div id="login-area">
       <h1 class="text-center">Your trust is our robust</h1>
@@ -167,7 +168,7 @@
       <button id="backButtons2" type="button" class="btn btn-success check-out">Back</button>
      </div>
    </div>
-<script src="script.js"></script>
+<script src="script2.js"></script>
 </body>
 
 </html>
