@@ -17,7 +17,7 @@ enterBtn.addEventListener("click", function () {
 })
 
 // back2 button
-const back2Btn = document.getElementById('backButtons2');
+const back2Btn = document.getElementById('backButtons1');
 back2Btn.addEventListener("click", function () {
     const thankYou= document.getElementById('thankYou');
     thankYou.style.display = 'none';
@@ -67,7 +67,15 @@ document.getElementById("phone-increase").addEventListener("click",function () {
 document.getElementById("phone-decrease").addEventListener("click",function () {
     handleProductchange('phone',false);
 })
-
+// Create string
+function getFormatedNumber(num) {
+    if (num == "-") {
+        return "";
+    }
+    var n = Number(num);
+    var value = n.toLocaleString("en");
+    return value;
+}
 
 function handleProductchange(product,isIncrease) {
     const productInput = document.getElementById(product + '-count');
@@ -89,7 +97,7 @@ function handleProductchange(product,isIncrease) {
     if (product == 'case') {
         productTotal = productNewCount*59;
     }
-    document.getElementById(product + "-total").innerText = productTotal;
+    document.getElementById(product + "-total").innerText = getFormatedNumber(productTotal);
     calculateTotal();
 }
 
@@ -97,11 +105,11 @@ function calculateTotal() {
     const phoneCount = getInputvalue("phone");
     const caseCount = getInputvalue("case");
     const totalPrice = phoneCount*1219 + caseCount*59;
-    document.getElementById('subTotalPrice').innerText = totalPrice;
+    document.getElementById('subTotalPrice').innerText = getFormatedNumber(totalPrice) ;
     const tax = totalPrice * .15;
-    document.getElementById("tax-amount").innerText = parseInt(tax);
+    document.getElementById("tax-amount").innerText = getFormatedNumber(tax);
     const grandTotal = parseInt(tax) + totalPrice;
-    document.getElementById("grand-total").innerText = grandTotal;
+    document.getElementById("grand-total").innerText = getFormatedNumber(grandTotal);
 }
 
 function getInputvalue(product) {
