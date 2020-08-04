@@ -17,7 +17,7 @@ enterBtn.addEventListener("click", function () {
 })
 
 // back2 button
-const back2Btn = document.getElementById('backButtons1');
+const back2Btn = document.getElementById('backButtons2');
 back2Btn.addEventListener("click", function () {
     const thankYou= document.getElementById('thankYou');
     thankYou.style.display = 'none';
